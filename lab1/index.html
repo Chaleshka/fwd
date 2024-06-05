@@ -3,17 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>First lab</title>
+
+    <style>
+        #special{
+            margin: 20px 0 20px 0;
+            padding: 20px;
+            background-color: rgba(5, 82, 171, 0.4);
+        }
+        div{
+            border: 2px black dashed;
+        }
+        div>#in-div{
+            color:red;
+        }
+        div>p{
+            color: blue;
+        }
+        .class-para{
+            background-color: cadetblue;
+        }
+    </style>
 </head>
 <body>
     <header>
 
     </header>
     <main>
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" placeholder="your name" type="text">
+        <button id="send" onclick="f()">send name</button>
+        <script>
+            let but = document.getElementById("send");
+            but.addEventListener("mouseover", f1);
+            but.addEventListener("mouseout", f2);
 
+            function f(){
+                const el = document.getElementById("name");
+                alert("Your name is: " + el.value);
+            }
+
+            function f1(){
+                but.textContent = "PRESS!!!!!";
+            }
+            function f2(){
+                but.textContent = "send name";
+            }
+        </script>
     </main>
     <footer>
-        
+        <p>@COPYRIGHT 2019</p>
     </footer>
 </body>
 </html>
